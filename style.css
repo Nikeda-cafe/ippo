@@ -5,3 +5,22 @@ Author: naoto
 Description: my original theme
 Version: 1.0 
 */
+:root{
+    --basecolor: #63a211;
+}
+@media(min-width: 800px){
+    .container{
+        width: 760px;
+        margin: 0 calc((100vw - 760px)/2);
+    }
+}
+h1{
+    color: var(--basecolor);
+}
+h2{
+    padding-left: 10px;
+    border-left: 10px solid var(--basecolor);
+}
+.wp-block-image{
+    margin: 0;
+}
