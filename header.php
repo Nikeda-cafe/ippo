@@ -6,5 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <?php wp_head(); ?>
 </head>
-<body>
+<body <?php body_class() ?>>
 <?php wp_body_open(); ?>
+<header class="head container">
+    <a class="site-name" href="<?php echo esc_url(home_url()); ?>"><?php bloginfo( "name" ) ?></a>
+    <p><?php bloginfo("description"); ?></p>
+</header>

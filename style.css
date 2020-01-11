@@ -5,7 +5,7 @@ Author: naoto
 Description: my original theme
 Version: 1.0 
 */
-html{
+html,body{
     margin: 0;
 }
 :root{
@@ -18,13 +18,42 @@ html{
         margin: 0 calc((100vw - 760px)/2);
     }
 }
+@media(max-width: 720px){
+    .container{
+        margin: 0 10px;
+    }
+}
 .screen-reader-text{
     display: none;
 }
-h1{
+/* header */
+.title{
     text-align: center;
     color: var(--basecolor);
 }
+.site-name{
+    font-size: 1.8rem;
+}
+.site-name{
+    text-decoration: none;
+    color: gray;
+}
+.head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* footer */
+.foot{
+    background-color: limegreen;
+    margin: 0;
+    padding: var(--basemargin) 0;
+    text-align: center;
+    color: white;
+}
+
+/* page */
 h2{
     padding-left: 10px;
     border-left: 10px solid var(--basecolor);
@@ -36,6 +65,8 @@ h2{
     display: flex;
     justify-content: center;
 }
+
+/* category */
 .post-categories{
     display: flex;
     justify-content: space-between;
@@ -62,6 +93,8 @@ h2{
     text-decoration: none;
     color: var(--basecolor);
 }
+
+/* navigation */
 .nav-links{
     display: flex;
     align-items: center;
