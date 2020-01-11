@@ -5,8 +5,12 @@ Author: naoto
 Description: my original theme
 Version: 1.0 
 */
+html{
+    margin: 0;
+}
 :root{
     --basecolor: #63a211;
+    --basemargin: 20px;
 }
 @media(min-width: 800px){
     .container{
@@ -14,7 +18,11 @@ Version: 1.0
         margin: 0 calc((100vw - 760px)/2);
     }
 }
+.screen-reader-text{
+    display: none;
+}
 h1{
+    text-align: center;
     color: var(--basecolor);
 }
 h2{
@@ -22,5 +30,58 @@ h2{
     border-left: 10px solid var(--basecolor);
 }
 .wp-block-image{
-    margin: 0;
+    margin: var(--basemargin) 0;
+}
+.cat-cont{
+    display: flex;
+    justify-content: center;
+}
+.post-categories{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    list-style: none;
+    padding: 0;
+    color: var(--basecolor);
+}
+.post-categories>li:not(:last-child){
+    margin-right: 20px;
+}
+.post-categories::before{
+    content: "\f318";
+    font-size: 30px;
+    font-family: "dashicons";
+    margin-right: 20px;
+}
+.post-categories>li{
+    border: 1px solid var(--basecolor);
+    border-radius: 20px;
+    padding: 3px 10px;
+}
+.post-categories>li>a{
+    text-decoration: none;
+    color: var(--basecolor);
+}
+.nav-links{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.nav-links>div:not(:last-child){
+    margin-right: 20px;
+}
+.nav-previous::before{
+    content: "\f341";
+}
+.nav-next::after{
+    content: "\f345";
+}
+.nav-previous, .nav-next{
+    display: flex;
+    align-items: center;
+}
+.nav-previous::before, .nav-next::after{
+    font-family: "dashicons";
+    font-size: 30px;
+    color: var(--basecolor);
 }
