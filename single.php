@@ -2,17 +2,21 @@
 <?php if(have_posts()):
         while(have_posts()):
             the_post(); ?>
-            <div class="cat-cont">
-                <?php the_category(); ?>
-            </div>
-            <?php the_title('<h1 class="title">',"</h1>"); ?>
-            <div class="container">
-                <time datetime="<?php echo esc_attr(get_the_date(DATE_W3C)); ?>">
-                    <?php echo esc_html(get_the_date("Y年m月d日")); ?>
-                </time>
-                <?php the_content();?>
-                <?php the_post_navigation(); ?>
-            </div>
+            <article class="container">
+                <section class="section1">
+                    <div class="cat-cont">
+                        <?php the_category(); ?>
+                    </div>
+                    <?php the_title('<h1 class="title">',"</h1>"); ?>
+                    <time datetime="<?php echo esc_attr(get_the_date(DATE_W3C)); ?>">
+                        <?php echo esc_html(get_the_date("Y年m月d日")); ?>
+                    </time>
+                </section>
+                <section class="section2">
+                    <?php the_content();?>
+                </section>
+            </article>
+            <?php the_post_navigation(); ?>
         <?php endwhile;
     endif;
 ?>

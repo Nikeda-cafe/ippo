@@ -11,6 +11,7 @@ html,body{
 :root{
     --basecolor: #63a211;
     --basemargin: 20px;
+    --myfont: 'Ibarra Real Nova', serif;
 }
 @media(min-width: 800px){
     .container{
@@ -33,8 +34,7 @@ html,body{
 }
 .site-name{
     font-size: 1.8rem;
-}
-.site-name{
+    font-family: var(--myfont);
     text-decoration: none;
     color: gray;
 }
@@ -51,6 +51,7 @@ html,body{
     padding: var(--basemargin) 0;
     text-align: center;
     color: white;
+    font-family: var(--myfont);
 }
 
 /* page */
@@ -64,6 +65,9 @@ h2{
 .cat-cont{
     display: flex;
     justify-content: center;
+}
+.section1{
+    text-align: center;
 }
 
 /* category */
