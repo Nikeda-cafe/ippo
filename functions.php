@@ -12,6 +12,7 @@ function set_up(){
         "comment-form"
     ));
     add_theme_support("post-thumbnails");
+    add_theme_support("align-wide");
 }
 add_action( "after_setup_theme","set_up");
 

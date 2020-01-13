@@ -18,9 +18,10 @@
 <?php endwhile; endif; ?>
 </main>
 <div class="pagi">
-    <?php the_posts_pagination(array(
+    <?php $page = array(
         "prev_text" => "<span>&larr;</span>",
         "next_text" => "<span>&rarr;</span>"
-    )); ?>
+    ); ?>
+    <?php the_posts_pagination($page); ?>
 </div>
 <?php get_footer(); ?>
