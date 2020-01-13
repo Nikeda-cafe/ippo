@@ -27,6 +27,15 @@ html,body{
 .screen-reader-text{
     display: none;
 }
+/* thumbnail setting */
+img{
+    max-width: 100%;
+    height: auto;
+}
+a:hover{
+    opacity: 0.7;
+}
+
 /* header */
 .title{
     text-align: center;
@@ -121,4 +130,49 @@ h2{
     font-family: "dashicons";
     font-size: 30px;
     color: var(--basecolor);
+}
+
+/* recent */
+.posthead{
+    text-align: center;
+} 
+.postlist img{
+    height: 180px;
+    object-fit: cover;
+}
+.sub-title{
+    font-size: large;
+    font-weight: bold;
+    font-family: var(--myfont);
+    color: var(--basecolor);
+}
+@media(min-width: 760px){
+    .myposts{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .postlist{
+        width: 48%;
+    }
+}
+.postlist h2{
+    font-size: smaller;
+    margin-bottom: 20px;
+}
+.postlist figure{
+    margin: 0;
+}
+
+/* pagination */
+.page-numbers:not(:last-child){
+    padding-right: 10px;
+}
+.page-numbers{
+    text-decoration: none;
+    color: var(--basecolor);
+}
+.pagination .nav-links{
+    display: flex;
+    justify-content: center;
 }
