@@ -183,3 +183,7 @@ h2{
     display: flex;
     justify-content: center;
 }
+/* sidebar */
+.widgettitle{
+    font-family: var(--myfont);
+}

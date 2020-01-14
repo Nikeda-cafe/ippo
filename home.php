@@ -24,4 +24,5 @@
     ); ?>
     <?php the_posts_pagination($page); ?>
 </div>
+<?php get_sidebar(); ?>
 <?php get_footer(); ?>

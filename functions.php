@@ -34,3 +34,14 @@ function script(){
     wp_enqueue_style("dashicons");
 };
 add_action("wp_enqueue_scripts","script");
+
+function widgets(){
+    $arg = array(
+        "id" => "sidebar-a",
+        "name" => "フッターメニュ",
+        "before_widget" => '<section id="%1$s" class="%2$s">',
+        "after_widget" => "</section>"
+    );
+    register_sidebar($arg);
+}
+add_action("widgets_init","widgets");
