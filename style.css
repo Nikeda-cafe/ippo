@@ -78,6 +78,9 @@ h2{
         margin: 10px 0;
     }
 }
+.wp-block-image{
+    margin: 0;
+}
 .cat-cont{
     display: flex;
     justify-content: center;
@@ -186,4 +189,58 @@ h2{
 /* sidebar */
 .widgettitle{
     font-family: var(--myfont);
+}
+@media(min-width: 720px){
+    .side{
+        columns: 3;
+    }
+}
+.side{
+    background-color: beige;
+    padding: calc(var(--basemargin) + 20px) 0;
+    /* display: flex; */
+    /* justify-content: space-between; */
+    
+    margin-top:40px ;
+}
+.side>section{
+    /* width: 28%; */
+    break-inside: avoid;
+    margin: 0 var(--basemargin);
+}
+.side figure{
+    margin: 0;
+}
+.side figure img{
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    border: none;
+}
+.side h2{
+    background-color: var(--basecolor);
+    color: white;
+    padding: 5px 5px;
+    margin: 0;
+}
+.side p{
+    font-size: x-small;
+}
+.myprofile{
+    text-align: center;
+}
+section>ul{
+    padding: 0;
+    list-style: none;
+    padding-left: 10px;
+}
+section>ul>li>a{
+    text-decoration: none;
+    color: black;
+}
+section select{
+    width: 100%;
+    height: 50px;
+    margin: var(--basemargin) 0;
+    cursor: pointer;
 }
