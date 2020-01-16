@@ -21,7 +21,4 @@
     endif;
 ?>
 <?php get_footer() ?>
-<time datatime=""><?php echo esc_attr(get_theme_data(DATE_W3C));  ?>
-<?php echo get_the_date("Y年m月d日") ?>
-</time>
 
