@@ -16,8 +16,42 @@
                     <?php the_content();?>
                     <?php the_post_navigation(); ?>
                 </section>
+                <section class="section3 alignwide">
+                    <h3 class="sub-title">Related</h3>
+                    <div class="related">
+                        <?php
+                        $cat = get_the_category();
+                        $post_id = get_the_ID();
+                        $cat_arr = array();
+                        //var_dump($cat);
+                        foreach($cat as $data){
+                            $cat_arr[] = $data->term_id;
+                        }
+                        // var_dump($cat_arr);
+                            $arr = array(
+                                "category__in" => $cat_arr,
+                                "orderby" => "rand",
+                                "posts_per_page" => "4",
+                                "exclude" => $post_id
+                            );
+                        $posts = get_posts($arr);
+                        foreach($posts as $post):
+                            setup_postdata($post);
+                        ?>
+                        <div class="relatecard">
+                            <?php if(has_post_thumbnail()): ?>
+                                <figure>
+                                    <?php the_post_thumbnail(); ?>
+                                </figure>
+                            <?php endif; ?>
+                                <?php the_title("<a>","</a>"); ?>
+                        </div>
+                        <?php endforeach; ?>
+                        <?php wp_reset_postdata(); ?>
+                    </div>
+                </section>
             </article>
-        <?php endwhile;
+        <?php endwhile; 
     endif;
 ?>
 <?php get_footer() ?>
