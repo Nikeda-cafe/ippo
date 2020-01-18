@@ -13,4 +13,9 @@
         <a class="site-name" href="<?php echo esc_url(home_url()); ?>"><?php bloginfo( "name" ) ?></a>
         <p><?php bloginfo("description"); ?></p>
     </div>
+    <?php wp_nav_menu( array(
+        "location" => "primary",
+        "container" => "nav",
+        "container_class" => "alignfull"
+    )); ?>
 </header>

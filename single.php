@@ -20,16 +20,17 @@
                     <h3 class="sub-title">Related</h3>
                     <div class="related">
                         <?php
-                        $cat = get_the_category();
-                        $post_id = get_the_ID();
-                        $cat_arr = array();
+                        $cat = wp_get_post_categories(get_the_ID());
                         //var_dump($cat);
-                        foreach($cat as $data){
-                            $cat_arr[] = $data->term_id;
-                        }
+                        $post_id = get_the_ID();
+                        //$cat_arr = array();
+                        //var_dump($cat);
+                        // foreach($cat as $data){
+                        //     $cat_arr[] = $data->term_id;
+                        // }
                         // var_dump($cat_arr);
                             $arr = array(
-                                "category__in" => $cat_arr,
+                                "category__in" => $cat,
                                 "orderby" => "rand",
                                 "posts_per_page" => "4",
                                 "exclude" => $post_id

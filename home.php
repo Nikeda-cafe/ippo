@@ -1,6 +1,7 @@
 <?php get_header(); ?>
 <div class="posthead container">
     <h1>最新情報</h1>
+    <?php echo get_home_url(); ?>
     <p class="sub-title">Recent</p>
 </div>
 <main class="container myposts">
