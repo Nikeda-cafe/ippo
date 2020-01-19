@@ -32,14 +32,16 @@
                             foreach($posts as $post):
                                 setup_postdata($post);
                         ?>
-                        <div class="relatecard">
-                            <?php if(has_post_thumbnail()): ?>
-                                <figure>
-                                    <?php the_post_thumbnail(); ?>
-                                </figure>
-                            <?php endif; ?>
-                                <?php the_title("<a>","</a>"); ?>
-                        </div>
+                        <a href="<?php echo esc_url(get_permalink()); ?>">
+                            <div class="relatecard">
+                                <?php if(has_post_thumbnail()): ?>
+                                    <figure>
+                                        <?php the_post_thumbnail(); ?>
+                                    </figure>
+                                <?php endif; ?>
+                                    <?php the_title("<span>","</span>"); ?>
+                            </div>
+                        </a>
                         <?php endforeach; ?>
                         <?php wp_reset_postdata(); ?>
                     </div>

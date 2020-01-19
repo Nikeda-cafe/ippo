@@ -179,6 +179,9 @@ h2{
         width: 48%;
     }
 }
+.postlist:hover{
+    opacity: 0.7;
+}
 .postlist h2{
     font-size: smaller;
     margin-bottom: 20px;
@@ -267,7 +270,10 @@ section select{
 .related div{
     padding-top: var(--basemargin);
 }
-.related div:not(:first-child){
+.related>a{
+    text-decoration: none;
+}
+.related>a:not(:first-child){
     margin-left: var(--basemargin);
 }
 .related figure{
@@ -275,6 +281,9 @@ section select{
 }
 .related img{
     height: 140px;
+}
+.related span{
+    color: black;
 }
 /* about */
 .mymargin{
