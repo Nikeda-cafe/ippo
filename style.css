@@ -40,6 +40,17 @@ a:hover{
         max-width: none;
         width: auto;
     }
+    .alignfull{
+        margin: 0 calc((100vw - 760px)/2*-1);
+    }
+    .alignwide-menu{
+        padding: 0 calc((100vw - 760px)/4);
+    }
+}
+@media(max-width: 500px){
+    .alignfull{
+        margin: 0 -10px;
+    }
 }
 
 /* header */
@@ -283,27 +294,18 @@ section select{
     padding: 10px 0;
 }
 /* menu */
-nav>ul{
-    padding: 8px 0;
+nav>.menu{
+    padding-top: 8px;
+    padding-bottom: 8px;
     list-style: none;
     display: flex;
     justify-content: start;
     background-color: limegreen;
 }
-nav>ul>li{
+nav>ul>li:not(:first-child){
     padding-left: 10px;
 }
 nav a{
     text-decoration: none;
     color: white;
-}
-@media(min-width: 800px){
-    .alignfull{
-        margin: 0 calc((100vw - 760px)/2*-1);
-    }
-}
-@media(max-width: 500px){
-    .alignfull{
-        margin: 0 -10px;
-    }
 }

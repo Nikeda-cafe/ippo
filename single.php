@@ -20,24 +20,17 @@
                     <h3 class="sub-title">Related</h3>
                     <div class="related">
                         <?php
-                        $cat = wp_get_post_categories(get_the_ID());
-                        //var_dump($cat);
-                        $post_id = get_the_ID();
-                        //$cat_arr = array();
-                        //var_dump($cat);
-                        // foreach($cat as $data){
-                        //     $cat_arr[] = $data->term_id;
-                        // }
-                        // var_dump($cat_arr);
+                            $post_id = get_the_ID();
+                            $cat = wp_get_post_categories($post_id);
                             $arr = array(
                                 "category__in" => $cat,
                                 "orderby" => "rand",
                                 "posts_per_page" => "4",
                                 "exclude" => $post_id
                             );
-                        $posts = get_posts($arr);
-                        foreach($posts as $post):
-                            setup_postdata($post);
+                            $posts = get_posts($arr);
+                            foreach($posts as $post):
+                                setup_postdata($post);
                         ?>
                         <div class="relatecard">
                             <?php if(has_post_thumbnail()): ?>

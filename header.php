@@ -16,6 +16,7 @@
     <?php wp_nav_menu( array(
         "location" => "primary",
         "container" => "nav",
-        "container_class" => "alignfull"
+        "container_class" => "alignfull",
+        "menu_class" => "alignwide-menu menu"
     )); ?>
 </header>
