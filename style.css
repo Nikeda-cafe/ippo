@@ -8,6 +8,9 @@ Version: 1.0
 html,body{
     margin: 0;
 }
+.page-title{
+    text-align: center;
+}
 :root{
     --basecolor: #63a211;
     --basemargin: 20px;
@@ -42,7 +45,9 @@ a:hover{
     }
     .alignfull{
         margin: 0 calc((100vw - 760px)/2*-1);
+        width: auto;
     }
+
     .alignwide-menu{
         padding: 0 calc((100vw - 760px)/4);
     }
